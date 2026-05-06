@@ -1,0 +1,71 @@
+# SSH Key Generation & Passwordless Authentication
+
+## Overview
+This project demonstrates how to generate SSH key pairs and enable passwordless authentication between Linux systems using `ssh-keygen`.
+
+---
+
+## Steps Performed
+
+### 1. Generate SSH Key Pair
+```bash
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+
+- Key stored in: `~/.ssh/id_rsa`  
+- Public key: `~/.ssh/id_rsa.pub`
+
+---
+
+### 2. Copy Public Key to Remote Server
+```bash
+ssh-copy-id user@remote_host
+```
+
+OR manually:
+```bash
+cat ~/.ssh/id_rsa.pub | ssh user@remote_host "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+```
+
+---
+
+### 3. Set Permissions (Remote Machine)
+```bash
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+```
+
+---
+
+### 4. Test SSH Login
+```bash
+ssh user@remote_host
+```
+
+---
+
+## 🚀 Outcome
+
+- Successfully enabled passwordless SSH authentication between Linux systems  
+- Strengthened system security using key-based authentication instead of passwords  
+- Simplified and streamlined remote Linux server access and management  
+
+---
+
+## 💡 Best Practices
+
+- Prefer `ed25519` keys instead of RSA:
+```bash
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+
+- Always test login after setup:
+```bash
+ssh user@remote_host
+```
+
+- Maintain correct SSH permissions:
+```bash
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+```
