@@ -13,16 +13,16 @@ This repository contains documentation and configurations for essential Linux se
 * **Security:** Created a dedicated FTP user with a non-shell login.
 
 ### Project Screenshots:
-![FTP Status](images/FTP%201.png)
+![FTP Status](Images/FTP%201.png)
 *Figure 1: Initializing the VSFTPD service.*
 
-![FTP Client](images/FTP%202.png)
+![FTP Client](Images/FTP%202.png)
 *Figure 2: Successful connection via FTP client.*
 
-![FTP Config](images/FTP%203.png)
+![FTP Config](Images/FTP%203.png)
 *Figure 3: Configuration file verification.*
 
-![FTP Transfer](images/FTP%204.png)
+![FTP Transfer](Images/FTP%204.png)
 *Figure 4: File transfer verification.*
 
 ---
@@ -36,16 +36,16 @@ This repository contains documentation and configurations for essential Linux se
 * **Access:** Authorized public keys for seamless AWS EC2 login.
 
 ### Project Screenshots:
-![SSH Key Gen](images/ssh%201.png)
+![SSH Key Gen](Images/ssh%201.png)
 *Figure 5: Generating secure SSH keys.*
 
-![SSH Transfer](images/ssh%202.png)
+![SSH Transfer](Images/ssh%202.png)
 *Figure 6: Authorizing the public key on the server.*
 
-![SSH Login](images/ssh%203.png)
+![SSH Login](Images/ssh%203.png)
 *Figure 7: Passwordless login verification.*
 
-![SSH Security](images/ssh4.png)
+![SSH Security](Images/ssh4.png)
 *Figure 8: Hardening the SSH configuration.*
 
 ---
