@@ -8,50 +8,51 @@ This repository contains documentation and configurations for essential Linux se
 **Goal:** Securely share files between a local machine and an AWS EC2 Linux instance.
 
 ### Technical Implementation:
-* **OS:** Amazon Linux / Ubuntu
 * **Service:** `vsftpd` (Very Secure FTP Daemon)
-* **AWS:** Configured Security Groups to allow Port 21 and Passive Ports (PASV).
-* **Security:** Created a dedicated FTP user with a non-shell login (`/sbin/nologin`) for security.
+* **AWS:** Configured Security Groups for Port 21 and Passive Ports.
+* **Security:** Created a dedicated FTP user with a non-shell login.
 
 ### Project Screenshots:
-![FTP Service Status](FTP%201.png)
-*Figure 1: Initializing the VSFTPD service and verifying status.*
+![FTP Status](images/FTP%201.png)
+*Figure 1: Initializing the VSFTPD service.*
 
-![FTP Client Connection](FTP%202.png)
-*Figure 2: Successful connection via FTP client showing directory listing.*
+![FTP Client](images/FTP%202.png)
+*Figure 2: Successful connection via FTP client.*
 
-![FTP Configuration Verification](FTP%203.png)
-*Figure 3: Configuration file setup and user permission checks.*
+![FTP Config](images/FTP%203.png)
+*Figure 3: Configuration file verification.*
 
-![FTP File Transfer](FTP%204.png)
-*Figure 4: Successful file upload/download verification.*
+![FTP Transfer](images/FTP%204.png)
+*Figure 4: File transfer verification.*
 
 ---
 
 ## 🔐 Project 2: SSH Key-Based Authentication
-**Goal:** Replace password-based logins with secure SSH keys for remote server management.
+**Goal:** Secure remote server management using RSA/ED25519 key pairs instead of passwords.
 
 ### Technical Implementation:
-* **Key Generation:** Used `ssh-keygen` to create RSA/ED25519 key pairs.
-* **Distribution:** Used `ssh-copy-id` to transfer the public key to the remote server.
-* **Security:** Disabled password authentication in `/etc/ssh/sshd_config` to prevent brute-force attacks.
+* **Key Generation:** Created keys using `ssh-keygen`.
+* **Security:** Disabled password-based authentication in `sshd_config`.
+* **Access:** Authorized public keys for seamless AWS EC2 login.
 
 ### Project Screenshots:
-![SSH Key Generation](ssh1.png)
-*Figure 5: Generating the public/private key pair on the local machine.*
+![SSH Key Gen](images/ssh%201.png)
+*Figure 5: Generating secure SSH keys.*
 
-![SSH Key Transfer](ssh2.png)
-*Figure 6: Authorizing the key on the AWS EC2 instance.*
+![SSH Transfer](images/ssh%202.png)
+*Figure 6: Authorizing the public key on the server.*
 
-![SSH Passwordless Login](ssh3.png)
-*Figure 7: Successful login without a password using the secure key.*
+![SSH Login](images/ssh%203.png)
+*Figure 7: Passwordless login verification.*
+
+![SSH Security](images/ssh4.png)
+*Figure 8: Hardening the SSH configuration.*
 
 ---
 
 ## 🛠️ Tech Stack
 * **Cloud:** AWS (EC2, Security Groups, VPC)
 * **Linux:** Amazon Linux / Ubuntu
-* **Protocols:** FTP, SFTP, SSH
-* **Storage:** LVM, NFS
+* **Services:** FTP, SSH, LVM, NFS
 
 
