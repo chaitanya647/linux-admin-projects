@@ -4,7 +4,7 @@ This repository showcases a professional portfolio of Linux system administratio
 
 ---
 
-## 🚀 Project 1: [Service Configuration & User Access (FTP)](./ftp-vsftpd-server/)
+## 🚀 Project 1: [ftp-vsftod-server](./ftp-vsftpd-server/)
 *(Click title for full documentation)*
 
 **Goal:** Securely share files between a local machine and an AWS EC2 Linux instance using VSFTPD.
@@ -17,7 +17,7 @@ This repository showcases a professional portfolio of Linux system administratio
 
 ---
 
-## 🔐 Project 2: [Identity & Access Management (SSH)](./SSH-Security-Hardening/)
+## 🔐 Project 2: [SSH-Security-Hardening](./SSH-Security-Hardening/)
 *(Click title for full documentation)*
 
 **Goal:** Harden server security by implementing RSA/ED25519 key-based authentication and disabling password logins.
@@ -30,7 +30,7 @@ This repository showcases a professional portfolio of Linux system administratio
 
 ---
 
-## 📂 Project 3: [Distributed File Systems (NFS)](./NFS-Network-Sharing/)
+## 📂 Project 3: [NFS-Network-Sharing](./NFS-Network-Sharing/)
 *(Click title for full documentation)*
 
 **Goal:** Configure centralized, shared network storage between multiple Linux nodes within a VPC.
@@ -43,7 +43,7 @@ This repository showcases a professional portfolio of Linux system administratio
 
 ---
 
-## 💽 Project 4: [Dynamic Disk Administration (LVM)](./LVM-Storage-Management/)
+## 💽 Project 4: [LVM-Storage-Management](./LVM-Storage-Management/)
 *(Click title for full documentation)*
 
 **Goal:** Implement Logical Volume Management to pool physical disks and allow zero-downtime storage scaling.
