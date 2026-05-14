@@ -4,7 +4,9 @@ This repository contains documentation and configurations for essential Linux se
 
 ---
 
-## 🚀 Project 1: FTP Server Configuration (VSFTPD)
+## 🚀 Project 1: [FTP Server Configuration (VSFTPD)](./ftp-server-setup/)
+*(Click the title above for the full step-by-step setup guide)*
+
 **Goal:** Securely share files between a local machine and an AWS EC2 Linux instance.
 
 ### Technical Implementation:
@@ -27,7 +29,9 @@ This repository contains documentation and configurations for essential Linux se
 
 ---
 
-## 🔐 Project 2: SSH Key-Based Authentication
+## 🔐 Project 2: [SSH Key-Based Authentication](./ssh-keygen/)
+*(Click the title above for the full security hardening guide)*
+
 **Goal:** Secure remote server management using RSA/ED25519 key pairs instead of passwords.
 
 ### Technical Implementation:
