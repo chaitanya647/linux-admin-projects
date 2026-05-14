@@ -4,7 +4,7 @@ This repository showcases a professional portfolio of Linux system administratio
 
 ---
 
-## 🚀 Project 1: [ftp-vsftod-server](./ftp-vsftpd-server/)
+## 🚀 Project 1: [ftp-vsftpd-server](./ftp-vsftpd-server/)
 *(Click title for full documentation)*
 
 **Goal:** Securely share files between a local machine and an AWS EC2 Linux instance using VSFTPD.
