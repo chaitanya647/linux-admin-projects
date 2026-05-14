@@ -1,0 +1,54 @@
+# LVM (Logical Volume Manager) Storage Management
+
+## 🎯 Objective
+To demonstrate advanced storage management by pooling multiple physical disks into a single virtual group. This project showcases the ability to create, mount, and dynamically resize partitions in a production Linux environment without downtime.
+
+---
+
+## 🛠️ Tools & Commands
+* **Environment:** AWS EC2 with attached EBS Volumes
+* **Utilities:** `pvcreate`, `vgcreate`, `lvcreate`, `lvextend`, `xfs_growfs`
+
+---
+
+## 💻 Technical Implementation
+
+### 1. Physical Layer (PV)
+Initialize raw EBS volumes for LVM use:
+```bash
+sudo pvcreate /dev/xvdf /dev/xvdg
+sudo pvs  # View summary of physical volumes
+
+---
+
+2. Logical Layer (VG & LV)
+Combine disks into a Volume Group and create a usable Logical Volume:
+
+# Create Volume Group
+sudo vgcreate vg_data /dev/xvdf /dev/xvdg
+
+# Create 5GB Logical Volume and format with XFS
+sudo lvcreate -L 5G -n lv_storage vg_data
+sudo mkfs.xfs /dev/vg_data/lv_storage
+
+---
+
+The "Advantage" (Online Resize)
+Demonstrating how to handle a full disk by extending capacity without downtime:
+
+# Extend the Logical Volume by 2GB
+sudo lvextend -L +2G /dev/vg_data/lv_storage
+
+# Resize the filesystem to recognize the new space
+sudo xfs_growfs /data
+
+---
+
+Key Outcomes & Advantages
+*Zero Downtime: Increased storage capacity while the system remained online, demonstrating professional uptime management.
+*Storage Pooling: Combined multiple physical AWS EBS volumes into a single logical pool, maximizing resource efficiency.
+*Scalability: Proved the ability to scale storage resources dynamically as data grows, a critical skill for Database and Cloud administration.
+
+Real-World Use Case
+In production environments, disk space is unpredictable. Using LVM allows a Linux Administrator to respond to "Disk Full" alerts instantly by adding
+virtual space from a pool, ensuring that business-critical applications never crash due to storage limits.
