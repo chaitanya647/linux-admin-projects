@@ -1,0 +1,121 @@
+# FTP Server Setup (vsftpd)
+
+## Objective
+
+To configure an FTP server on a Linux system to enable secure file transfer between multiple users with controlled access.
+
+---
+
+## Tools & Services Used
+
+* Linux (RHEL / CentOS)
+* vsftpd (Very Secure FTP Daemon)
+
+---
+
+## Installation
+
+```bash
+sudo yum install vsftpd -y
+```
+
+---
+
+## Start and Enable Service
+
+```bash
+sudo systemctl start vsftpd
+sudo systemctl enable vsftpd
+```
+
+Check status:
+
+```bash
+sudo systemctl status vsftpd
+```
+
+---
+
+## Create FTP Users
+
+```bash
+sudo useradd ftpuser1
+sudo passwd ftpuser1
+```
+
+---
+
+## Configure FTP Directory
+
+```bash
+sudo mkdir -p /home/ftpuser1/ftp/upload
+sudo chmod 750 /home/ftpuser1/ftp
+sudo chmod 770 /home/ftpuser1/ftp/upload
+```
+
+---
+
+## Configure vsftpd
+
+Edit config file:
+
+```bash
+sudo vi /etc/vsftpd/vsftpd.conf
+```
+
+Update/add:
+
+```ini
+anonymous_enable=NO
+local_enable=YES
+write_enable=YES
+chroot_local_user=YES
+allow_writeable_chroot=YES
+```
+
+---
+
+## Restart Service
+
+```bash
+sudo systemctl restart vsftpd
+```
+
+---
+
+## Open Firewall (if enabled)
+
+```bash
+sudo firewall-cmd --permanent --add-service=ftp
+sudo firewall-cmd --reload
+```
+
+---
+
+## Testing FTP Connection
+
+From client:
+
+```bash
+ftp <server-ip>
+```
+
+Login using created user credentials.
+
+---
+
+## 📊 Result
+
+* FTP server successfully configured
+* Multiple users can securely upload/download files
+* Access restricted using permissions
+
+---
+
+## Real-World Use Case
+
+Used in organizations for:
+
+* Internal file sharing
+* Backup transfers
+* Secure data exchange between servers
