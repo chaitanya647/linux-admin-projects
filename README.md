@@ -1,4 +1,4 @@
-# Linux Administration & AWS Projects
+# Linux Administration Projects
 
 This repository contains documentation and configurations for essential Linux services hosted on AWS EC2 instances.
 
