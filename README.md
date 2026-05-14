@@ -14,10 +14,10 @@ This repository contains documentation and configurations for essential Linux se
 * **Security:** Created a dedicated FTP user with a non-shell login for safety.
 
 ### Project Screenshots:
-![FTP Configuration](ftp-1.png)
+![FTP Configuration](ftp 1.png)
 *Figure 1: Initializing the VSFTPD service and status check.*
 
-![FTP Connection](ftp-2.png)
+![FTP Connection](ftp 2.png)
 *Figure 2: Successful connection via FTP client showing directory listing.*
 
 ---
@@ -31,7 +31,7 @@ This repository contains documentation and configurations for essential Linux se
 * **AWS Networking:** Edited Inbound Rules for NFS (Port 2049).
 
 ### Project Screenshots:
-![NFS Setup](ftp-3.png) 
+![NFS Setup](ftp 3.png) 
 *Figure 3: Exporting the filesystem and verifying mount points.*
 
 > **Note:** Replace "ftp-3.png" above with the actual name of your NFS screenshot if it is different!
