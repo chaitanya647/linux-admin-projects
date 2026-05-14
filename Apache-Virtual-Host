@@ -1,0 +1,130 @@
+# Apache Virtual Host Project
+
+## Objective
+
+To configure Apache HTTP Server to host multiple websites on a single Linux server using name-based Virtual Hosting.
+
+---
+
+## Tools Used
+
+* Linux (RHEL / CentOS)
+* Apache HTTP Server (httpd)
+* DNS/hosts file configuration
+
+---
+
+## Installation
+
+```bash
+sudo yum install httpd -y
+```
+
+---
+
+## Start Apache Service
+
+```bash
+sudo systemctl start httpd
+sudo systemctl enable httpd
+```
+
+---
+
+## Website Setup
+
+```bash
+sudo mkdir -p /var/www/site1
+sudo mkdir -p /var/www/site2
+```
+
+---
+
+## Sample Web Pages
+
+Site 1:
+
+```bash
+echo "Welcome to Site 1" > /var/www/site1/index.html
+```
+
+Site 2:
+
+```bash
+echo "Welcome to Site 2" > /var/www/site2/index.html
+```
+
+---
+
+## Virtual Host Configuration
+
+File: `/etc/httpd/conf.d/vhosts.conf`
+
+```apache
+<VirtualHost *:80>
+    ServerName site1.local
+    DocumentRoot /var/www/site1
+</VirtualHost>
+
+<VirtualHost *:80>
+    ServerName site2.local
+    DocumentRoot /var/www/site2
+</VirtualHost>
+```
+
+---
+
+## Restart Apache
+
+```bash
+sudo systemctl restart httpd
+```
+
+---
+
+## Host File Configuration (Client Side)
+
+```bash
+sudo vi /etc/hosts
+```
+
+Add:
+
+```
+<server-ip> site1.local
+<server-ip> site2.local
+```
+
+---
+
+## Firewall Configuration
+
+```bash
+sudo firewall-cmd --permanent --add-service=http
+sudo firewall-cmd --reload
+```
+
+---
+
+## Testing
+
+Open browser:
+
+* http://site1.local
+* http://site2.local
+
+---
+
+## Result
+
+* Multiple websites hosted on single server
+* Domain-based routing working
+* Apache Virtual Hosting successfully implemented
+
+---
+
+## Real-World Use Case
+
+* Shared hosting environments
+* Multi-tenant web servers
+* Cost-effective web hosting solutions
