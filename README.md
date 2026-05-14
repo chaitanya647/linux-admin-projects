@@ -1,13 +1,13 @@
 # Linux Administration Projects
 
-This repository contains documentation and configurations for essential Linux services hosted on AWS EC2 instances.
+This repository showcases a professional portfolio of Linux system administration, network services, and storage management implemented on AWS EC2 infrastructure.
 
 ---
 
-## 🚀 Project 1: [FTP Server Configuration (VSFTPD)](./ftp-server-setup/)
+## 🚀 Project 1: [Service Configuration & User Access (FTP)](./ftp-vsftpd-server/)
 *(Click title for full documentation)*
 
-**Goal:** Securely share files between a local machine and an AWS EC2 Linux instance.
+**Goal:** Securely share files between a local machine and an AWS EC2 Linux instance using VSFTPD.
 
 ### Project Screenshots:
 ![FTP Status](Images/FTP%201.png)
@@ -17,10 +17,10 @@ This repository contains documentation and configurations for essential Linux se
 
 ---
 
-## 🔐 Project 2: [SSH Key-Based Authentication](./ssh-keygen/)
+## 🔐 Project 2: [Identity & Access Management (SSH)](./SSH-Security-Hardening/)
 *(Click title for full documentation)*
 
-**Goal:** Secure remote server management using RSA/ED25519 key pairs instead of passwords.
+**Goal:** Harden server security by implementing RSA/ED25519 key-based authentication and disabling password logins.
 
 ### Project Screenshots:
 ![SSH Key Gen](Images/ssh%201.png)
@@ -30,10 +30,10 @@ This repository contains documentation and configurations for essential Linux se
 
 ---
 
-## 📂 Project 3: [NFS (Network File System) Setup](./NFS-Setup/)
+## 📂 Project 3: [Distributed File Systems (NFS)](./NFS-Network-Sharing/)
 *(Click title for full documentation)*
 
-**Goal:** Configure shared storage between multiple Linux servers in a VPC.
+**Goal:** Configure centralized, shared network storage between multiple Linux nodes within a VPC.
 
 ### Project Screenshots:
 ![NFS Export](Images/NFS%201.png)
@@ -43,21 +43,27 @@ This repository contains documentation and configurations for essential Linux se
 
 ---
 
-## 💽 Project 4: [LVM (Logical Volume Manager) Management](./LVM-Partition/)
+## 💽 Project 4: [Dynamic Disk Administration (LVM)](./LVM-Storage-Management/)
 *(Click title for full documentation)*
 
-**Goal:** Efficiently manage disk storage by creating and resizing partitions without downtime.
+**Goal:** Implement Logical Volume Management to pool physical disks and allow zero-downtime storage scaling.
 
 ### Project Screenshots:
-![LVM PV/VG Status](Images/LVM%201.png)
+![LVM Status](Images/LVM%201.png)
 ![LVM Creation](Images/LVM%202.png)
 ![LVM Resize](Images/LVM%203.png)
 
 ---
 
 ## 🛠️ Tech Stack
-* **Cloud:** AWS (EC2, Security Groups, VPC)
-* **Linux:** Amazon Linux / Ubuntu
-* **Services:** FTP, SSH, LVM, NFS
+* **Cloud Infrastructure:** AWS (EC2, Security Groups, VPC, EBS)
+* **Linux Distributions:** Amazon Linux / Ubuntu / RHEL
+* **Core Competencies:** Storage Management (LVM), Network Protocols (NFS/FTP), Identity Management (SSH Hardening)
+
+---
+
+## 👤 Author
+**Chaitanya Chintappanavar**  
+Linux Administrator & Cloud Enthusiast
 
 
