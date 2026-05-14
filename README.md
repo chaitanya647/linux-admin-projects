@@ -5,52 +5,53 @@ This repository contains documentation and configurations for essential Linux se
 ---
 
 ## 🚀 Project 1: [FTP Server Configuration (VSFTPD)](./ftp-server-setup/)
-*(Click the title above for the full step-by-step setup guide)*
+*(Click title for full documentation)*
 
 **Goal:** Securely share files between a local machine and an AWS EC2 Linux instance.
 
-### Technical Implementation:
-* **Service:** `vsftpd` (Very Secure FTP Daemon)
-* **AWS:** Configured Security Groups for Port 21 and Passive Ports.
-* **Security:** Created a dedicated FTP user with a non-shell login.
-
 ### Project Screenshots:
 ![FTP Status](Images/FTP%201.png)
-*Figure 1: Initializing the VSFTPD service.*
-
 ![FTP Client](Images/FTP%202.png)
-*Figure 2: Successful connection via FTP client.*
-
 ![FTP Config](Images/FTP%203.png)
-*Figure 3: Configuration file verification.*
-
 ![FTP Transfer](Images/FTP%204.png)
-*Figure 4: File transfer verification.*
 
 ---
 
 ## 🔐 Project 2: [SSH Key-Based Authentication](./ssh-keygen/)
-*(Click the title above for the full security hardening guide)*
+*(Click title for full documentation)*
 
 **Goal:** Secure remote server management using RSA/ED25519 key pairs instead of passwords.
 
-### Technical Implementation:
-* **Key Generation:** Created keys using `ssh-keygen`.
-* **Security:** Disabled password-based authentication in `sshd_config`.
-* **Access:** Authorized public keys for seamless AWS EC2 login.
-
 ### Project Screenshots:
 ![SSH Key Gen](Images/ssh%201.png)
-*Figure 5: Generating secure SSH keys.*
-
 ![SSH Transfer](Images/ssh%202.png)
-*Figure 6: Authorizing the public key on the server.*
-
 ![SSH Login](Images/ssh%203.png)
-*Figure 7: Passwordless login verification.*
-
 ![SSH Security](Images/ssh4.png)
-*Figure 8: Hardening the SSH configuration.*
+
+---
+
+## 📂 Project 3: [NFS (Network File System) Setup](./NFS-Setup/)
+*(Click title for full documentation)*
+
+**Goal:** Configure shared storage between multiple Linux servers in a VPC.
+
+### Project Screenshots:
+![NFS Export](Images/NFS%201.png)
+![NFS Client Mount](Images/NFS%202.png)
+![NFS Permissions](Images/NFS%203.png)
+![NFS Transfer](Images/NFS%204.png)
+
+---
+
+## 💽 Project 4: [LVM (Logical Volume Manager) Management](./LVM-Partition/)
+*(Click title for full documentation)*
+
+**Goal:** Efficiently manage disk storage by creating and resizing partitions without downtime.
+
+### Project Screenshots:
+![LVM PV/VG Status](Images/LVM%201.png)
+![LVM Creation](Images/LVM%202.png)
+![LVM Resize](Images/LVM%203.png)
 
 ---
 
