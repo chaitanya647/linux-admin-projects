@@ -84,7 +84,7 @@ sudo mount <server-ip>:/nfs_share /mnt
 * Multiple clients can access shared directory
 * Permissions managed effectively
 
---
+---
 
 ## Real-World Use Case
 
