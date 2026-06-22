@@ -1,6 +1,14 @@
 # Linux Administration Projects
 
-This repository showcases a professional portfolio of Linux system administration, network services, and storage management implemented on AWS EC2 infrastructure.
+This repository showcases a professional portfolio of Linux system administration, network services, and storage management implemented on AWS EC2 infrastructure. Each project demonstrates enterprise-grade server management, security hardening, and storage automation.
+
+---
+
+## 🛠️ Technical Toolkit
+* **Cloud Infrastructure:** AWS (EC2, Security Groups, VPC, EBS)
+* **Linux Distributions:** RHEL / Amazon Linux / Ubuntu
+* **Core Competencies:** Storage Management (LVM), Network Protocols (NFS/FTP), Identity & Security (SSH Hardening)
+* **Automation:** Bash Scripting
 
 ---
 
@@ -55,15 +63,9 @@ This repository showcases a professional portfolio of Linux system administratio
 
 ---
 
-## 🛠️ Tech Stack
-* **Cloud Infrastructure:** AWS (EC2, Security Groups, VPC, EBS)
-* **Linux Distributions:** Amazon Linux / Ubuntu / RHEL
-* **Core Competencies:** Storage Management (LVM), Network Protocols (NFS/FTP), Identity Management (SSH Hardening)
-
----
-
 ## 👤 Author
 **Chaitanya Chintappanavar**  
-Linux Administrator & Cloud Enthusiast
+*Linux Administrator & Cloud Enthusiast*  
+[LinkedIn Profile](https://www.linkedin.com/in/chaitanyabc)
 
-
+*Open to entry-level opportunities in Linux Systems Administration, Cloud Support, or Junior DevOps roles in the Bengaluru area.*
