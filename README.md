@@ -54,12 +54,33 @@ This repository showcases a professional portfolio of Linux system administratio
 ## 💽 Project 4: [LVM-Storage-Management](./LVM-Storage-Management/)
 *(Click title for full documentation)*
 
-**Goal:** Implement Logical Volume Management to pool physical disks and allow zero-downtime storage scaling.
+**Goal:** Implement Logical Volume Management to pool physical disks and allow zero-downtime, flexible storage scaling.
 
-### Project Screenshots:
-![LVM Status](Images/LVM%201.png)
-![LVM Creation](Images/LVM%202.png)
-![LVM Resize](Images/LVM%203.png)
+### Project Deployment Steps & Screenshots:
+
+#### Phase 1: Disk Partitioning & Verification
+* **Initial Storage Layout & Volume Discovery (`fdisk -l` / `lsblk`)**
+  ![Initial Disk Verification](Images/LVM1.png)
+* **Creating Standard Primary Partitions using `fdisk`**
+  ![Disk Partitioning Menu](Images/LVM2.png)
+* **Formatting Partitions & Managing Busy Partition Tables with `kpartx`**
+  ![Partition Routing and Verification](Images/LVM3.png)
+
+#### Phase 2: Building the LVM Architecture
+* **Initializing Local File Systems and Testing Mount points**
+  ![Standard File System Formatting](Images/LVM4.png)
+* **Partition Table Synchronization and Secondary Boundary Creation**
+  ![Secondary Partition Generation](Images/LVM5.png)
+* **Handling Swap Signatures and Setting Up Initial Volume Groups (`vgcreate`)**
+  ![Volume Initialization Framework](Images/LVM6.png)
+
+#### Phase 3: Dynamic Scaling & Live Expansion
+* **Creating Physical Volumes (`pvcreate`) and Provisioning Logical Volumes (`lvcreate`)**
+  ![LVM Structural Setup](Images/LVM7.png)
+* **Analyzing Logical Volume Metadata via `lvdisplay` and Setting `ext4` Blueprints**
+  ![Volume Metadata Verification](Images/LVM8.png)
+* **Live File System Expansion (`lvresize` & Online `resize2fs` Allocation)**
+  ![On-line Live Storage Scaling](Images/LVM9.png)
 
 ---
 
