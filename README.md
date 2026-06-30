@@ -7,8 +7,8 @@ This repository showcases a professional portfolio of Linux system administratio
 ## 🛠️ Technical Toolkit
 * **Cloud Infrastructure:** AWS (EC2, Security Groups, VPC, EBS)
 * **Linux Distributions:** RHEL / Amazon Linux / Ubuntu
-* **Core Competencies:** Storage Management (LVM), Network Protocols (NFS/FTP), Identity & Security (SSH Hardening)
-* **Automation:** Bash Scripting
+* **Core Competencies:** Storage Management (LVM), Network Protocols (NFS/FTP), Identity & Security (SSH Hardening), Web Servers (Apache HTTPD)
+* **Automation:** Bash Scripting (User Provisioning Automation)
 
 ---
 
@@ -30,11 +30,19 @@ This repository showcases a professional portfolio of Linux system administratio
 
 **Goal:** Harden server security by implementing RSA/ED25519 key-based authentication and disabling password logins.
 
-### Project Screenshots:
-![SSH Key Gen](Images/ssh%201.png)
-![SSH Transfer](Images/ssh%202.png)
-![SSH Login](Images/ssh%203.png)
-![SSH Security](Images/ssh4.png)
+### Project Deployment Steps & Screenshots:
+
+#### Phase 1: Cryptographic Key Generation
+* **Asymmetric Key Pair Provisioning (`ssh-keygen -t rsa`)**
+  ![SSH Key Pair Generation](Images/SSH1.png)
+
+#### Phase 2: Remote Node Provisioning & Security Overlays
+* **Target User Setup & Secure Key Distribution via `scp`**
+  ![Secure Public Key Transfer](Images/SSH2.png)
+
+#### Phase 3: Infrastructure Validation & Authentication Auditing
+* **Establishing Passwordless Access & Identity Verification (`ifconfig` Auditing)**
+  ![Passwordless Verification Session](Images/SSH3.png)
 
 ---
 
